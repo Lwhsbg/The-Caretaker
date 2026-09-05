@@ -103,5 +103,84 @@ label day_1:
     with dissolve
     show voss at truecenter
     with dissolve
-    
+    v "This is the main hall. Dining room is there and the drawing room is just through there."
+    v "You do not want to take either much. He takes his meals alone."
+    v "I think you might already know, but the west wing is off limits."
+    v "Study, his private rooms. Only Simon has ever gone past, and that is only when called for."
+    hide voss
+    m "Called for? I heard that he does not see anyone."
+    show voss at truecenter
+    with dissolve
+    v "He does not. He only ever writes and Simon reads."
+    hide voss
+    "She said it so plainly that it did not sound so much strange at all."
+    menu:
+        "Should you push a little further?"
+        "Push a little further.":
+            m "That does not seem odd to you?"
+            m "Running a house for someone that has not shown himself in ages?"
+            show voss at truecenter
+            with dissolve
+            v "Odd is not the word that I would use anymore."
+            v "That is just how it is over here."
+            v "You will get used to it and stop wondering eventually."
+            v "That is just how it is for everyone over here."
+            v "You will stop asking eventually, everyone does."
+            $ suspicion += 1
+        "Let it go.":
+            mc "Right.... noted."
+            show voss at truecenter
+            v "Good. The kitchen is back that way if you need anything."
+            v "Mind the rules and then you will be fine here."
+    scene garden at bg_fit
+    with dissolve
+    with fade
+    show hale at truecenter
+    with dissolve
+    h "Yo are the new one? I figured. No one else would be out here anyways."
+    h "What are you doing here"
+    hide hale
+    m "Just getting my bearings. You work the grounds?"
+    show hale at truecenter
+    with dissolve
+    h "Grounds. Yeah not the house."
+    h "Have not set foot past the back door in 3 years."
+    h "I do not plan to either."
+    hide hale 
+    menu:
+        "That is surprising. Should I ask why?"
+        "Ask why.":
+            m "Is there a reason for that?"
+            show hale at truecenter
+            with dissolve
+            h "No... I just prefer it out here."
+            hide hale
+            "He did not look at you when he said that."
+            $ suspicion += 1
+        "Leave it alone.":
+            m "Fair enough."
+            show hale at truecenter
+            with dissolve
+            "He went back to the hedges without any other word, and did not stop until you had walked away."
+    "That evening, you went back to get the tray that you had put there in the morning."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "The food was untouched. Every bit of it was arranged as exactly how you left it."
+    "But there was a change, the note was replaced with the new one. You pick it up."
+    mn "You spoke to Voss and Hale about me today."
+    mn "I do not mind some curiosity. I mind repitition."
+    mn "Ask them again, and I will know that you did not the first time."
+    "You had not told anyone that you asked."
+    scene bedroom at truecenter
+    with dissolve
+    with fade
+    "Your first day as a caretaker of that place was over."
+    "You laid awoke for a while, to a house that everyone insisted, was just settling."
+    $ day_num = 2
+    jump day_2
+label day_2:
+            
+        
+        
         
