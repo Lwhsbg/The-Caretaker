@@ -45,3 +45,63 @@ label start:
     $ day_num = 1
     jump day_1
 label day_1:
+    scene bedroom at bg_fit
+    with fade
+    with dissolve
+    "Morning came early, as Simon had warned you."
+    "The room was small but tidy, and the bed was made up beforeyou even chose it."
+    "A schedule was already written on the nightstand, written in the same hand as last night's note."
+    mn "6:30 : Breakfast tray to the study room, do not knock it. Just leave it and go."
+    mn "8:00 : Mrs. Voss will show you around the house."
+    mn "All the other hours are yours, being your first day."
+    mn "Within the rules that I have already given."
+    "You got dresses up and went to find the kitchen."
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    show voss at truecenter
+    with dissolve
+    v "So you are the new hire. Good, the tray is ready to go."
+    v "Do not dance around, he does not like sitting it out."
+    hide voss
+    m "Nobody has ever mentioned his real name."
+    m "Not even what he looks like."
+    show voss at truecenter
+    with dissolve
+    v "That is because none of us know that either."
+    v "Not anymore."
+    hide voss
+    menu:
+        m "Anymore?"
+        "Ask what she means by \"Anymore\"":
+            m "What do you mean by Anymore?"
+            show voss at truecenter
+            with dissolve
+            v "I meant that it has been a long, long time since anyone has laid their eyes on him."
+            v "Long before me, you or Simon were even here."
+            v "And Simon has been here longer than me."
+            v "Take the tray. West hallway, last door. And do not knock."
+            hide voss
+            $ suspicion = 1
+        "Just take the tray.":
+            show voss
+            with dissolve
+            v "Go on, then. West hallway last door."
+            v "Just leave the tray there. Do not knock."
+            $ suspicion = 1
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade        
+    "You carried the tray up the stairs which creaked in places even where it looked fine."
+    "The study room's door looked heavier than the other doors."
+    "You set the tray down as you were told, and did not knock."
+    "As you turned around to leave, you thought you heard the floor shift on the other side of the door."
+    "Like someone standing slowly, after sitting alone for a long time."
+    "You told yourself that it was the house settling."
+    scene main_hall at bg_fit
+    with fade
+    with dissolve
+    show voss at truecenter
+    with dissolve
+    
+        
