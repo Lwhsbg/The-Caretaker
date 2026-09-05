@@ -1,0 +1,5 @@
+define m = Character("[main_character]", color = "#c9a876")
+define v = Character("Mrs. Voss", color = "#8a9a8a")
+define h = Character("Mr. Hale", color = "#7a6a58")
+define s = Character("Simon", color = "#b8c4d9")
+define mn = Character("- left unsigned -", color = "#5c2a2a", what_italic = True)
