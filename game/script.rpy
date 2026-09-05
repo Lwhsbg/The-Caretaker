@@ -39,7 +39,7 @@ label start:
     mn "Do not go looking for me."
     mn "I will know if you do."
     "You looked up. Simon was still smiling."
-    show simoon at truecenter
+    show simon at truecenter
     s "He is very particular. But it's all right, he is fair if you follow the rules."
     s "Come, I will show you to your room. Tomorrow starts early, it is already late."
     $ day_num = 1
@@ -180,7 +180,51 @@ label day_1:
     $ day_num = 2
     jump day_2
 label day_2:
-            
+    scene bedroom at bg_fit
+    with fade
+    with dissolve
+    "You woke up before the note did, for once."
+    "It caught up with you when you made it at the kitchen table instead."
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    mn "6:30 : Breakfast tray, as before."
+    mn "10:00 : The library needs dusting. Simon will show where the good clothes are kept."
+    mn "Leave anything that you find as it is."
+    "you noticed, for the first time, that the handwriting slanted differently at the end of each note than at the start."
+    "Like two different moods, or two different hands that tried to match each other."
+    menu:
+        "Dwell on the handwriting.":
+            "You told herself that you were overthinking it."
+            "Grief did some strange things to a person's hands, maybe."
+            "You did not know anything about him yet, really."
+            $ suspicion += 1
+        "Do not think too hard about it.":
+            "You folded the note and got moving."
+            "No sense reading too much into paper."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "You brought the tray up."
+    "Just the cup that you left there yesterday seemed to have mooved a little bit."
+    "Just the cup. Nothing else."
+    menu:
+        "Look closer at the cup.":
+            "It had now exactly been turned ninety degrees, handle now facing the door instead of out of it."
+            "Like someone wanted you to notice it had been touched, without actually drinking anything."
+            $ suspicion += 1
+        "Do not overthink it, just keep moving.":
+            "You told yourself that people move cups. That is what cups are for."
+            "You set the new tray down, did not knock, same as yesterday."
+            "Same as you had been told to."
+    scene bg main_hall at bg_fit
+    with dissolve
+    with fade
+    show simon at truecenter
+    with dissolve
+     
+
+
         
         
         
