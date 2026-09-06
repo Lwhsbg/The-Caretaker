@@ -258,10 +258,90 @@ label after_scene:
     with dissolve
     s "Here is the library. Cloths are on the shelf by the door."
     s "Mind the top one, it sticks."
-    scene library at truecenter
+    scene library at bg_fit
     with dissolve
     with fade
-    
+    "The library smelled something like old paper and something faintly like candle smoke, though there was not any candle around."
+    "Dusting was slow, methodical work. Most of the books were just very, very old."
+    "On the third shelf, wedged down, you found a small framed photograph, face down."
+    menu:
+        "Turn it over and look.":
+            "A man in his sixties, silvered hair and standing infront of the same house."
+            "Someone had written in the back in pencil, faded to nothing."
+            "\"Edmund Ashworth. Final photograph, taken the week before.\""
+            "The week before *what*, it did not say."
+            $ suspicion += 2
+            "You heard footsteps somewhere above you, slow, deliberate, crossing a room directly overhead."
+            "There was no room supposed to be there."
+        "Leave it face down, undisturbed.":
+            "You left it exactly as you found it. Some things in this house, were starting to feel, left face down on purpose."
+            "Still, you could not unsee the edge of the frame, or stop wondering who turned it over to begin with, and who turned it back."
+            $ suspicion += 1
+    "You finished dusting faster than you had meant to."
+    "You did not look back at the ceiling again."
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    show voss at truecenter
+    with dissolve
+    v "You have got dust on your sleeve."
+    v "From the library, then."
+    hide voss
+    m "Mrs. Voss, is his name Edmund? Edmund Ashworth?"
+    "She went very still, the way people do when a name lands somewhere they did not want it to."
+    show voss at truecenter
+    with dissolve
+    v "...Where did you hear that name?"
+    hide voss
+    menu:
+        "Tell her about the photograph.":
+            m "There was a photo in the library, face down. It said final photograph. What does final mean?"
+            show voss at truecenter
+            v "That is not something that I am going to discuss standing in the kitchen."
+            v "Finish your work, some questions do not have good answers."
+            $ suspicion += 2
+            hide voss
+            "She did not say the answer. But she also did not tell you that the question was wrong."
+        "Say you just heard it somewhere.":
+            m "I do not know. I must have heard Simon say it."
+            show voss at truecenter
+            with dissolve
+            with fade
+            v "Simon does not use that name. Nobody here does."
+            hide voss 
+            "She looked at you a moment longer, then went back to her work without another word."
+            $ suspicion += 1
+    scene bg garden at bg_fit
+    with dissolve
+    with fade
+    show hale at truecenter
+    with dissolve
+    "You find Hale kneeling at a patch of overturned gradd near the wall."
+    m "Planting something new?"
+    h "...No"
+    "He stood, brushed his knees, and did not explain any further."
+    hide hale 
+    "You notice, gthat the patch was the size and shape of a grave, though there was no any stone."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "That night's tray came back with the moved cup again. same as yesterday."
+    "Besides it, a new note, longer than the others."
+    mn "You found the photograph."
+    mn "I do not fault you for that, curiosity is not disobedience, not yet."
+    mn "But you asked Simon whether he had seen my face and Voss my name."
+    mn "That is a pattern. A pattern worth watching."
+    mn "Sleep well, tomorrow I have something to deliver to you personally."
+    scene bedroom at bg_fit
+    with dissolve
+    with fade
+    "You read it two times. You were sure you had not said that name too loud to anyone."
+    "Only to Mrs. Voss,in a silent, empty kitchen."
+    $ day_num = 3
+    jump day_3
+label day_3
+         
+
 
             
         
