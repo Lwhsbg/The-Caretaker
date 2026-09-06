@@ -222,7 +222,49 @@ label day_2:
     with fade
     show simon at truecenter
     with dissolve
-     
+    s "There you are. Sheep alright?"
+    s "First nights in a new place are never easy, they say."
+    hide simon
+    m "It was fine. Very quiet though."
+    show simon at truecenter
+    with dissolve
+    s "Quiet. Quiet is good. Come on, the cloths are in the hall closet."
+    s "I will walk you into the library, it is a bit of a maze if you do not know about it."
+    "He talked the entire way there. About the weather and a leak in the east gutter."
+    "He kept meaning to mention to Hale. About nothing, really, filling every silence before it even had a chance to start."
+    hide simon 
+    menu optional_name:
+        "Ask him directly how long he has worked here.":
+            m "How long have you been here, exactly?"
+            m "Mrs. Voss made it sound like it was a long time."
+            show simon at truecenter
+            with dissolve
+            s "Oh, longer than I can properly say. Time gets away from you in a house like this."
+            hide simon
+            "He smiled when he said it. The smile did not change at all, which was the strange part."
+            $ suspicion += 1            
+        "Ask if he has ever seen Mr. Ashworth.":
+            m "Have you ever actually seen him? Face to face?"
+            show simon at truecenter
+            with dissolve
+            s "Once... a long time ago."
+            hide simon
+            "For the first time since you had met him, Simon did not fill the silence that immediately followed."
+            $ suspicion += 2
+        "Do not push. Just get to work.":
+            jump after_scene
+label after_scene:            
+    show simon at truecenter
+    with dissolve
+    s "Here is the library. Cloths are on the shelf by the door."
+    s "Mind the top one, it sticks."
+    scene library at truecenter
+    with dissolve
+    with fade
+    
+
+            
+        
 
 
         
