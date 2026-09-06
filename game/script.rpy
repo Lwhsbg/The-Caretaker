@@ -339,7 +339,61 @@ label after_scene:
     "Only to Mrs. Voss,in a silent, empty kitchen."
     $ day_num = 3
     jump day_3
-label day_3
+label day_3:
+    scene bedroom at bg_fit
+    with dissolve
+    with fade
+    "The note was waiting in the floor, slid in sometime during the night, probably."
+    "You had not heard anything anyways."
+    mn "Today, you will deliver something to me personally, not outside, but inside my desk, personaly with your own hands."
+    mn "Knock once, wait for silence."
+    mn "Enter only when I do not answer."
+    mn "The parcel is on the kitchen table. Do not open it."
+    "You read it again and again, to make sure you did not read the strange instructions wrong."
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    "The parcel was small and wrapped in brown paper. It looked pretty old, but you paid no mind."
+    menu:
+        "Try to feel what is inside through the paper.":
+            "You pressed your fingers through it."
+            "You felt something rectangular with edges. Maybe it was a book, or a photograph like the one that you found in the library."
+            $ suspicion += 1
+        "Carry it up as told.":
+            "You quickly dissociate any thoughts regarding what is inside the parcel, and proceeded to carry it upwards."
+    show voss at truecenter
+    with dissolvev "He has not asked for this in a very long time..."
+    hide voss
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "The heavy door looked the same as it had every other time you had stood infront of it."
+    "But somehow, today, it felt taller."
+    "You knocked once, like you were told, and then waited."
+    "Silence."
+    "You pushed the door open."
+    scene study at bg_fit
+    with dissolve
+    with fade
+    "The study was decent sized for a mansion, a desk faced the window with the chair pushed in."
+    "There was no one in the room."
+    "There was also, a distinct impression that someone had been, just some moments ago."
+    menu:
+        "Look around before setting the parcel down.":
+            "Books stacked up with a precision that no living hand kept up for long."
+            "A teacup on the desk's edge, the same shape of what you carried up this morning, bone dry with the faintest of steam rising through it."
+            "Like it had been poured seconds before you came in."
+            "You did not touch the teacup."
+            $ suspicion += 2
+        "Set the parcel down and then leave quickly.":
+            "You crossed the room, and set the parcel in the desk gently on the desk besides a stack of ledgers."
+            "You did not touch anything."
+            "That did not stop you from noticing though, a table that had moved slightly, maybe 2 inches after you had come in."
+            "Nothing had touched it."
+            $ suspicion += 1
+    "The temperature in the room had dropped hard enough that your breath fogged , once, and then it did not again."
+    "You left there without looking back, and did not remember closing the door until you were three steps down the hallway."
+        
          
 
 
