@@ -393,7 +393,60 @@ label day_3:
             $ suspicion += 1
     "The temperature in the room had dropped hard enough that your breath fogged , once, and then it did not again."
     "You left there without looking back, and did not remember closing the door until you were three steps down the hallway."
-        
+    scene main_hall at bg_fit
+    with dissolve
+    with fade
+    show simon at truecenter
+    with dissolve
+    s "There you are, how did it go? Did he say anything?"
+    hide simon
+    m "The room was empty."
+    "Simon's smile flickered, in a way  it does right when oit decides whether to go out or not."
+    show simon at truecenter
+    with dissolve
+    s "Well, empty. He does that, sometimes. Comes and goes. Big mansion with big doors."
+    menu:
+        "Point out that there is no other door out of that room.":
+            m "There is only one door, Simon. I was standing right outside of it."
+            show simon at truecenter
+            s "...Was there? I could have sworn-"
+            hide simon
+            "He stopped himself and laughed once, maybe a bit too much, and proceeded to change the topic before you could have asked what he had sworn."
+            $ suspicion += 2
+        "Let that comment go.":
+            m "Guess so."
+            show simon at truecenter
+            with dissolve
+            s "He will get what was delivered to him one way or another. He always does."
+            hide simon
+            "One way or the another. You turned the phrase over for the rest of your afternoon and did not really like the shape of it."
+    scene garden at bg_fit
+    with dissolve
+    with fade
+    m "Mr.Hale, is that a grave on the patch of dirt over there?"
+    "He did not answer right away. When he did, his voice changed in a way it never had before."
+    show hale at truecenter
+    with dissolve
+    h "Ask me something else."
+    hide hale 
+    m "Thats a no."
+    show hale at truecenter
+    with dissolve
+    h "Not a yes, either. Ask me something else, or nothing at all."
+    $ suspicion += 2
+    "You let it go, not because you wanted to, but because of Hale's face which told you not to push further."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "The tray was there as always, untouched."
+    mn "Thank you for the delivery. Whatever Simon told, ignore it. I am not the only ones who leaves notes. Be careful whom to trust."
+    "You stand cold in the hallway for a while, and then returned back to the bedroom."
+    scene bedroom at bg_fit
+    with dissolve
+    with fade
+    "Two different hands and two different notes. You start to understand Edmund was not the only one writing to you."
+    
+
          
 
 
