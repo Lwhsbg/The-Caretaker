@@ -445,7 +445,79 @@ label day_3:
     with dissolve
     with fade
     "Two different hands and two different notes. You start to understand Edmund was not the only one writing to you."
-    
+    $ day num = 4
+    jump day_4
+label day_4:
+    scene bedroom at bg_fit
+    with dissolve
+    with fade
+    if suspicion >= 9:
+        mn "You are asking questions faster than I can answer them safely."
+        mn "Slow down, for your own sake, not mine."
+    elif suspicion >= 4:
+        mn "Today, be more careful about who you ask than what you notice."
+    else:
+        mn "6:30 breakfast tray. That is the only thing for today."
+    "You read the notes lying in bed, sunlight not fully up, and thought that the notes had been sounding less like instructions and more like a person actually watching you."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    if suspicion >= 9:
+        "You did not want to look at the cup this morning. But you did anyway." 
+        "The tray had vanished. NIt had been replaced by an indentical one that you had not brought up yesterday."
+        $ suspicion += 1
+    elif suspicion >= 4:
+        "The cup had turned again, ninety degrees. The same as always. But the handle was pointed at you this time."
+        "This is strange."
+    else:
+        "You set the tray down and left without lingering. That is not the path that you want to go to."
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    show voss at truecenter
+    with dissolve
+    if suspicion >= 9:
+        v "I need you to listen to me, and not ask why."
+        v "Whatever you have been noticing, stop writing it out, or saying it out loud, and stop asking Simon about it."
+        hide voss 
+        m "Why Voss specifically?"
+        show voss at truecenter
+        with dissolve
+        v "Did i not tell you to not ask me why?"
+        hide voss 
+        $ suspicion += 2
+    elif suspicion >= 4
+        v "You have got that look again. The look of asking something that you should not."
+        hide Voss
+        m "Would you tell me if i did?"
+        m "Depends on the question. Try me."
+        menu:
+            "Ask if Simon has always worked here.":
+                m "Has Simon always worked here? Long before you did?"
+                show voss at truecenter
+                with dissolve
+                v "That is a strange way to put up a question."
+                v "Not always. There was someone before him."
+                hide voss
+                "It seemed like the sentence cost her something to finish."
+                $ suspicion += 2
+            "Do not push, ask something small.":
+                hide voss
+                m "Nevermind, is there anything you need help today with?"
+                show voss at truecenter
+                with dissolve
+                v "No, go on then."
+    else:
+        v "Morning, sleep alright?"
+        hide voss
+        m "Better than the first night."
+        show voss at truecenter
+        with dissolve
+        v "Give it time, or do not. Depends on who you ask."
+        hide voss
+        "She almost smiled. This was the first time you saw her nearly breaking one."
+        
+
 
          
 
