@@ -516,9 +516,99 @@ label day_4:
         v "Give it time, or do not. Depends on who you ask."
         hide voss
         "She almost smiled. This was the first time you saw her nearly breaking one."
-        
+    scene main_hall at bg_fit
+    with dissolve
+    with fade
+    "You were thinking of last night's note and turning it over."
+    "You suddenly had a thought, to mentioned it directly and see who reacted or flinched."
+    show simon at truecenter
+    with dissolve    
+    menu:
+        "Ask Simon outright if he writes these notes.":
+            if suspicion >= 9:
+                s "..."
+                hide simon
+                "For the first time since you had come to work here, this was the first time that Simon did not have an answer."
+                show simon at truecenter
+                with dissolve
+                s "That is a weird thing to ask to me. Get back to your work."
+                hide simon
+                $ suspicion += 3
+            elif suspicion >= 4:
+                s "No, why would you ask that?..."
+                s "I only carry them."
+                hide simon
+                "He said carry, not deliver. Something sounds wrong with that..."
+                $ suspicion += 2
+            else:
+                s "Ha? No. I could not forge them even if I wanted to. That is all him."
+                hide simon
+                "He just brushed it off that easily like it was not even that serious. Something might be wrong."
+                $ suspicion += 1
+        "Do not ask, just watch him instead.":
+            "You watch and observe him for a while. Nothing much wrong."
+            s "Something on your mind?"
+            hide simon 
+            m "No, just tired."
+            show simon at truecenter
+            with dissolve
+            s "Go and take a rest then."
+            $ suspicion += 1
+    scene garden at bg_fit
+    with dissolve
+    with fade
+    show hale at truecenter
+    with dissolve
+    if suspicion >= 9:
+        h "You seem like a man who stopped sleeping right."
+        hide Hale
+        m "Kinda, maybe just a little bit."
+        show hale at truecenter
+        with dissolve
+        h "Come here to sit for a bit. Not to talk about the house but just to sit for a bit."
+        hide hale
+        "It was not the kind of approach you wanted. But it was so far the kindest thing anyone ever offered you in this house."
+        $ suspicion += 1
+    elif suspicion >= 4:
+        h "Still up asking questions everywhere?"
+        hide hale
+        m "Trying not to, but that is not helping much."
+        show hale at truecenter 
+        with dissolve
+        h "Don't worry, it was like that for me too, for the first one or two years, at least."
+        hide hale 
+        "Those words did not sound comforting at all. Hale was shrouded with mysteries."
+    else:
+        "Today again? What are you doing here at the fields everyday??"
+        hide hale 
+        m "Just wandering about. Come to think of it, I always see you here."
+        show hale at truecenter
+        with dissolve
+        h "Sure, wander around as long as you like."
+    scene upstairs_hall
+    with dissolve
 
+    narrator "That night, the tray came back with only one note this time — but the handwriting wasn't the one you'd grown used to."
 
+    if suspicion >= 9:
+        master_note "I know you're close to understanding. I'm not going to stop you."
+        master_note "I will tell you this much, freely: ask Simon what year he thinks it is. Watch his face when he answers."
+    elif suspicion >= 4:
+        master_note "Someone else has been leaving marks in this house besides me. You've started to notice. Good."
+        master_note "I would rather you know slowly than not at all."
+    else:
+        master_note "Rest well tonight. Tomorrow will ask more of you than today did."
+
+    scene bg_bedroom
+    with dissolve
+
+    narrator "Whoever was writing these — Ashworth, or something wearing his name — they were, for the first time, actively helping you instead of warning you off."
+
+    narrator "You weren't sure yet if that was a good sign, or the most dangerous one so far."
+
+    $ day_num = 5
+
+    jump day_5
          
 
 
