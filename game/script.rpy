@@ -599,17 +599,77 @@ label day_4:
     else:
         master_note "Rest well tonight. Tomorrow will ask more of you than today did."
 
-    scene bg_bedroom
+    scene bedroom at bg_fit
     with dissolve
+    with fade
 
     narrator "Whoever was writing these — Ashworth, or something wearing his name — they were, for the first time, actively helping you instead of warning you off."
 
     narrator "You weren't sure yet if that was a good sign, or the most dangerous one so far."
-
     $ day_num = 5
-
     jump day_5
-         
+label day_5:
+    scene bedroom at bg_fit
+    with dissolve
+    with fade
+    if suspicion >= 9:
+        mn "Ask him today."
+        mn "I would do it myself, if i could."
+    elif suspicion >= 4:
+        mn "You have two days before the end of your first week. This mtter more than you think it does."
+        mn "That is why use them carefully."
+    else:
+        mn "Bring the tray as usual. Otherwise, you have a quiet day infront of you."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    if suspicion >= 9:
+        "You knocked, like you have always had."
+        "But this time, something knocked from the other side, a soft knock."
+        "You did not go in. You were not supposed to."
+    elif suspicion >= 4:
+        "The tray from yesterday was gone entirely."
+        "Not like the other times, where it had been left untouched."
+    else:
+        "It was the usual, the tray untouched."
+        "You were starting to think of the unusual cup as usual now."
+    scene main_hall at bg_fit
+    with dissolve
+    with hpunch
+    show simon at truecenter
+    with dissolve
+    s "Good morning, you look like you have got something on your mind."
+    menu:
+        "Ask him what year it is.":
+            m "What year is it right now?"
+            "Simon laughed at that question, like he always did."
+            s "What kind of question is that?"
+            s "It is-"
+            s "Why would you ask me that?"
+            hide Simon
+            "You could feel the switch in his tone, it had become a bit less certain."
+            if suspicion += 9:
+                m "Because I do not think that you know. I do not think you've known in a long time."
+                show simon at truecenter
+                with dissolve
+                s "..."
+                hide simon
+                "He did not answer for several seconds, did not accept or deny, just quiet."
+                $ suspicion += 4
+            elif suspicion += 4:
+                m "You do not know, do you?"
+                show simon at truecenter
+                with dissolve
+                s "It has been a long week, things blur."
+                hide simon
+                "You could sense the uncertainty in the tone."
+                $ suspicion += 2
+            else:
+                show simon at truecenter
+                with dissolve
+
+
+
 
 
             
