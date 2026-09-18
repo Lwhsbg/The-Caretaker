@@ -667,6 +667,64 @@ label day_5:
             else:
                 show simon at truecenter
                 with dissolve
+                m "Nevermind, forget that I asked."
+                s "Alright, if you say so.."
+                "He did not push more into the question."
+                $ suspicion += 1
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    if suspicion >= 9:
+        m "Simon does not know what the year is."
+        show voss at truecenter
+        with dissolve
+        v "Yeah, he would not."
+        hide voss
+        m "Mrs.Voss, how long has Simon actually been here?"
+        show voss at truecenter
+        with dissolve
+        v "Longer than he should be, longer than any of us should be."
+        v "He came in the same day as the owner of this house passed."
+        v "I do not think that it is really a coincidence."
+        v "Even though you have been here a short while, I do not think you think that either."
+        $ suspicion += 3
+    elif suspicion += 4:
+        m "Mrs.Voss, I think there is something wrong with Simon."
+        m "He could not tell me what year it is right now."
+        show voss at truecenter
+        with dissolve
+        v "I wonder when you had noticed that."
+        v "I will not explain, some things you have to figure out on your own."
+        hide voss
+        $ suspicion += 2
+    else:
+        show voss at truecenter
+        with dissolve
+        v "You are quiet today."
+        hide voss
+        m "I am just thinking."
+        show voss at truecenter
+        with dissolve
+        v "That sounds dangerous, in a mansion like this."
+        v "You should reconsider that habit maybe."
+    scene garden at bg_fit
+    with dissolve
+    with fade
+    if suspicion >= 9:
+        "You did not have to ask this time. He was already waiting on the unmarked patch of ground."
+        show hale at truecenter
+        with dissolve
+        h "You had a talk with Simon?"
+        hide hale 
+        m "A bit. Just a bit."
+        show hale at truecenter
+        with dissolve
+        h "This is where they put him. Properly, I mean. Not the way that the house has been keeping him now."
+        hide hale 
+        "The way the house keeps him now. You did not ask any further."
+        "You did not think that you were ready for the answer yet."
+        
+
 
 
 
