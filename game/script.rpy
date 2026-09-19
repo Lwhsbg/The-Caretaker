@@ -723,7 +723,75 @@ label day_5:
         hide hale 
         "The way the house keeps him now. You did not ask any further."
         "You did not think that you were ready for the answer yet."
+        $ suspicion += 3
+    elif suspicion >= 4:
+        show hale at truecenter
+        with dissolve
+        h "Youve got some look on your face today."
+        h "Did anything interesting happen or something?"
+        hide hale 
+        m "Something like that."
+        show hale at truecenter
+        with dissolve
+        h "Welcome to the club. I wish I could say that it gets easier haha."
+        hide hale 
+        "He went back to the hedges without waiting for a response."
+        "It almost felt like he was escaping a conversation that he did not want to have."
+    else:
+        show hale at truecenter
+        with dissolve
+        h "It is a quiet day, isnt it?"
+        h "Enjoy it, when you can at least."
+        hide hale 
+        "You did not ask what he meant. You were starting to understand that most of the things here were for you to understand yourself."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "You got a note this time which was shorter."
+    "But it sounded like whoever was writing that, was running out of patience."
+    mn "You asked him. Good."
+    mn "All I can say now is, Simon was someone like you, he is what's left of someone who tried to help me, just like you."
+    scene bedroom at bg_fit
+    with dissolve
+    with fade
+    "This was the first time in five days, you had gotten any close to the truth."
+    "You wonder if that has made him more trustworthy."
+    $ day_num = 6
+    jump day_6
+label day_6:
+    scene bedroom at bg_fit
+    with dissolve
+    with fade  
+    mn "One day remains after this one."
+    mn "You know what simon is now, but you dont know what I am, but i believe you will soon."
+    mn "Come to the study tonight, regardless of what you hear inside the door."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "The tray from last night was untouched, but the teacup was missing."
+    "You put down the new one and did not stop to see what else had been changed."
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    show voss at truecenter
+    with dissolve
+    v "You are going in the study tonight, aren't you?"
+    hide Voss
+    m "How did you know?"
+    show voss at truecenter
+    with dissolve
+    v "I can tell by your face."
+    hide voss
+    m "He asked me to."
+    show voss at truecenter
+    with dissolve
+    v "I know, I have seen the same thing with three people before you."
+    v "None that went down and returned changed for the better."
         
+
+
+
+
 
 
 
