@@ -866,6 +866,62 @@ label day_6:
     show hale at truecenter
     with dissolve
     h "No, it is a warning to remember that there is a difference between you and him."
+    h "If anything happens and it goes sideways there, save the man if you can."
+    h "Do not waste your pity on the house around him."
+    scene upstairs_hall at bg_fit
+    with dissolve
+    with fade
+    "You carried the tray up the stairs that evening."
+    "There was no cup on it this time. No plate either. Just a single folded note waiting where the tray should have been."
+    mn "You will know everything tonight."
+    mn "Whether you leave that room understanding me, or leave it not leaving it all, depend on the choices which are not mine anymore."
+    mn "Simon has his own hands in tonight, whether he means to or not."
+    mn "Do bring the key that Voss gave to you."
+    mn "Do not use it unless you must."
+    mn "Knock. Come in no matter what the answer."
+    scene bedroom
+    with dissolve
+    "You sat for a while and thought of what happened. Tomorrow was the day you would finally know what this house needs to do to you."
+    $ day_num = 7
+    jump day_7
+label day_7:
+    scene bedroom at bg_fit
+    with dissolve
+    with fade
+    "You did not sleep much as the morning came to a close."
+    "By the time light had fallen, you were already dressed with that key on your pocket."
+    "There was no note today. For the first time in a week, the house had nothing to tell you."
+    "As if whatever was gonna come to you did not need to be written down anymore."
+    scene kitchen_room at bg_fit
+    with dissolve
+    with fade
+    show voss at truecenter
+    with dissolve
+    v "You are still going then."
+    hide voss
+    m "Yeah, I have to know."
+    show voss at truecenter
+    with dissolve
+    m "Yeah, I have to know."
+    show voss at truecenter
+    with dissolve
+    v "No, you do not. That is the part that no one has believed."
+    v "I have had this conversation and no one understood. I believe you will not either."
+    v "I am not wasting my breath on this again."
+    hide voss
+    "She pressed both your hands around the key,like she was checking one last time that it was really there."
+    show voss at truecenter
+    with dissolve
+    v "Whatever that you decide tonight, decide it for yourself."
+    v "Not for Ashworth. Not for Simon. But for yourself."
+    hide voss
+    "That was the only thing that she was going to give you, and you both knew it."
+    scene bg_garden at bg_fit
+    with dissolve
+    with fade
+    show hale at truecenter
+    with dissolve
+    h "Do not waste"
 
 
         
