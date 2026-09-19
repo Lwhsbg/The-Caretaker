@@ -921,7 +921,49 @@ label day_7:
     with fade
     show hale at truecenter
     with dissolve
-    h "Do not waste"
+    h "I will not waste your time with warnings today. You have had six days of those."
+    h "Just remember what I have told you."
+    h "There is the man, and then there is the thing that is wearing what is left of him."
+    h "Whatever happens there, do not get both of them confused."
+    hide hale 
+    "He clasped you shoulder, once and hard and went back to the hedges without looking up or back again."
+    scene main_hall at bg_fit
+    with dissolve
+    with fade 
+    show simon at truecenter
+    with dissolve
+    s "Good morning"
+    hide simon
+    m "Goodmorning."
+    "The silence was very loud. But both of you knew what was in store."
+    m  "see you tonight."
+    show simon at truecenter
+    with dissolve
+    s "Yeah."
+    hide simon
+    "He does not understand it fully either, maybe."
+    scene upstairs_hall
+    with dissolve
+    "The night came faster than you expected it to."
+    "You climbed the stairs for one last time, key in one hand and nothing in the other."
+    "You did not have a tray, no note carried or in the door, nothing inbetween you and the truth."
+    "You were standing infront of the door."
+    "You knocked once."
+    "Something on the other side knocked back, twice."
+    "You went in regardless as you were told to."
+    scene study at bg_fit
+    with dissolve
+    with fade
+    "The study had changed. The cold fireplace from before had lit up now."
+    "But the coldness in the air still stayed from before."
+    "You see the figure of a man in the desk chair, finally, after all the time that you worked here."
+    show ashworth at truecenter
+    with dissolve
+    t "You actually came in. You are the third one ever to."
+    hide ashworth
+    m "You're-"
+    show ashworth at truecenter
+    t "Dead. Yeah, for quite a while. Although this house is very gnerous for letting me forget how long."
 
 
         
