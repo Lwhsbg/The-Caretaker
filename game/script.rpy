@@ -993,18 +993,59 @@ label day_7:
             t "You will know in the future."
             hide ashworth
             "You could feel the suspense in the atmosphere."
-            show ashworth at truecenter
-            with dissolve
-            show simon at left
-            with dissolve
-            s "I told you to not start without me."
-            t "I simply started the moment they knocked."
-            t "you were simply slow climbing the stairs, as always."
-            "Simon's smile which you had grown seeing was completely gone now."
-            "It was like a mask finally set down of someone."
-            s "Before you say another word, you should know the shape of what he is."
-            t "And you should know the shape of what you are too Simon, before you start talking about me."
-            "You stood between them as the room got colder, realizing too late that an argument had broken out."
+    show ashworth at truecenter
+    with dissolve
+    show simon at left
+    with dissolve
+    s "I told you to not start without me."
+    t "I simply started the moment they knocked."
+    t "you were simply slow climbing the stairs, as always."
+    "Simon's smile which you had grown seeing was completely gone now."
+    "It was like a mask finally set down of someone."
+    s "Before you say another word, you should know the shape of what he is."
+    t "And you should know the shape of what you are too Simon, before you start talking about me."
+    "You stood between them as the room got colder, realizing too late that an argument had broken out."
+    "You wonder how long this argument has been lasting."
+    s "I was a caretaker like you, once too."
+    s "I came up these stairs on a night like this too."
+    s "And then I made a mistake of pitying whatever was in this room."
+    t "Pity is generous, you wanted to be a hero."
+    t "And that is the difference that cost you everything."
+    s "I offered to help him move on. I offered it kindly without knowing what I was getting myself into."
+    s "He took the offer and made it permanent, bound me to this house instead of himself."
+    s "He wore my kindness like a full on coat for fashion."
+    t "You are not wrong. I would only add that you have spent every year searching for a new person to bind this responsibility on."
+    "Simon did not deny it. His silence alone was a confession."
+    m "So this whole week, the notes, the warnings, all of it... What was it actually for?"
+    t "For this moment, specifically. I need a caretaker in my place in this house."
+    t "Simon requires the same thing, but in the sense that he wants freedom instead."
+    s "Do not listen to him, or how he frames it."
+    s "If you help him, you become what he is."
+    s "You will be trapped here, feeding on whoever comes after you, forever."
+    t "And if you help Simon, you become what he is instead. Bound to serve in this hollow place forever."
+    t "Ask if he wishes that on you, and look at how much time he will take to answer."
+    "The key sat heavily on your pocket. You thought of Voss. About how she told you to decide for yourself."
+    "There were three ways to leave the house here, and the choice was yours to make."
+    menu:
+        "Choose Ashworth - offer to take his place.":
+            m "I will do it. I will take your place."
+            t "Thank you...truly."
+            "For a moment, he looked sorry and a moment later something older and hungrier settled in into his place."
+            jump ending_ashworth    
+        "Choose Simon - offer to free him.":
+            m "Let me free you then, Simon. I will trust you."    
+            s "Thank you a lot, truly."   
+            "He almost told you to stop. You watched him as he almost told you to stop."
+            "But in the end, you watched him choose not to."
+            jump ending_simon
+        "Choose neither - use the key and run.": 
+            m "I am being the replacement of no one here. My life is mine to live."
+            "You backed towards the door with the key. Both of them started speaking at once, so you could just hear gibberish."
+            "Begging, promising, maybe even threatening, the voices stopped sounding human longer you refused to listen."
+            jump ending_neutral
+label ending_ashworth:
+    
+    
             
             
 
