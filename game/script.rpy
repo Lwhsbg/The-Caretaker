@@ -963,7 +963,51 @@ label day_7:
     hide ashworth
     m "You're-"
     show ashworth at truecenter
+    with dissolve
     t "Dead. Yeah, for quite a while. Although this house is very gnerous for letting me forget how long."
+    hide ashworth
+    "He did not look dead. He just looked tired, like it had been his usual face always."
+    show ashworth at truecenter
+    with dissolve
+    t "I imagine that Voss and Hale have told you about some fragments of me."
+    t "All of it is true."
+    hide ashworth
+    menu:
+        "Ask what actually happened to him":
+            m "How did you die?"
+            show ashworth at truecenter
+            with dissolve
+            t "It was slow and by my own hands. I'd rather you not ask more about that."
+            t "This is not the part that matters."
+            hide ashworth
+        "Ask why the house keeps him at all.":
+            m "Why are you still here? What is keeping you?"
+            show ashworth at truecenter
+            with dissolve
+            t "If I am honest, hunger."
+            t "But with you, I have decided, to start something fresh."
+            hide ashworth
+            m "What fresh?"
+            show ashworth at truecenter
+            with dissolve
+            t "You will know in the future."
+            hide ashworth
+            "You could feel the suspense in the atmosphere."
+            show ashworth at truecenter
+            with dissolve
+            show simon at left
+            with dissolve
+            s "I told you to not start without me."
+            t "I simply started the moment they knocked."
+            t "you were simply slow climbing the stairs, as always."
+            "Simon's smile which you had grown seeing was completely gone now."
+            "It was like a mask finally set down of someone."
+            s "Before you say another word, you should know the shape of what he is."
+            t "And you should know the shape of what you are too Simon, before you start talking about me."
+            "You stood between them as the room got colder, realizing too late that an argument had broken out."
+            
+            
+
 
 
         
