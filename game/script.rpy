@@ -787,6 +787,87 @@ label day_6:
     with dissolve
     v "I know, I have seen the same thing with three people before you."
     v "None that went down and returned changed for the better."
+    hide hale 
+    m "What happened to them?"
+    show hale at truecenter
+    with dissolve
+    v "Two left the house within the same week and never spoke of it ever again."
+    v "The third-"
+    hide hale 
+    "She stopped herself, and paused for a second."
+    show hale at truecenter
+    with dissolve
+    v "The third is buried under where Hale won't let the grass grow."
+    v "that is all that I can say about it."
+    hide hale 
+    m "Then why are you telling me to go anyway?"
+    m "If no one has made it out in good condition?"
+    show hale at truecenter
+    with dissolve
+    v "Because I do not think that you are like the others."
+    v "And I do think that this hell of a house has been waiting for someone just like you, to set it right."
+    hide hale 
+    "Just as you were about to go, she pressed something small in your hand."
+    "It was an old iron key, warm despite the cold air in the kitchen."
+    show hale at truecenter
+    with dissolve
+    v "If anything goes wrong in there, open the cellar. Not the study, but the cellar."
+    v "Hale knows what is in there. I do not, and I have never wanted to."
+    hide hale 
+    scene main_hall at bg_fit
+    with dissolve
+    with fade
+    "Simon looked different today. You could not tell what, but it was weird."
+    show simon at truecenter
+    with dissolve
+    s "You know about me now, don't you?"
+    hide simon
+    m "I do not think so. I don't understand it yet."
+    show simon at truecenter
+    with dissolve
+    s "To be honest, I do not know much either. I remember hundreds of days hich felt the same."
+    s "I do not remember deciding to stay."
+    hide simon
+    "It was the most human thing that he had ever said to you."
+    "Probably the saddest too."
+    show simon at truecenter
+    with dissolve
+    s "Whatever happens in that room tonight, I would like to ask you to be kind to him."
+    s "He did not choose that either. Neither of us did."
+    hide simon
+    m "Are you trying to warn me, or beg me?"
+    show simon at truecenter
+    with dissolve
+    s "I do not think it even matters anymore."
+    hide simon
+    "He turned and walk away before you could even say anything else."
+    "For the first time since you met him, he did not fill the silence behind him."
+    "He just let it be..... quiet."
+    scene garden at bg_fit
+    with dissolve
+    with fade
+    m "Mrs. Voss gave me a key. Said you know what it opens."
+    "He looked at the key like it was something he hoped would never see again."
+    show hale at truecenter
+    h "Cellar. Under the west wing. It is behind the wine racks in the second shelf."
+    hide hale 
+    m "What is down there?"
+    show hale at truecenter
+    with dissolve
+    "The third one. The one who went in before you. And did not come back as himself."
+    hide hale 
+    "He said it calmly. Way too calmly."
+    show hale at truecenter
+    with dissolve
+    h "whatever is in it, it is cruel for the sake of you."
+    h "It is lonely, old and forgotten."
+    hide hale
+    m "Is that a warning not to go?"
+    show hale at truecenter
+    with dissolve
+    h "No, it is a warning to remember that there is a difference between you and him."
+
+
         
 
 
