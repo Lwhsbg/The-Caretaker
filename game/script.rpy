@@ -1044,6 +1044,48 @@ label day_7:
             "Begging, promising, maybe even threatening, the voices stopped sounding human longer you refused to listen."
             jump ending_neutral
 label ending_ashworth:
+    scene study at bg_fit
+    with dissolve
+    with fade
+    "The fire went out all at once, and with it, every year Ashworth had been carrying finally left his shoulders — and settled, instead, onto yours."
+
+    t "It will feel like sleep, at first. Then like hunger. Then, before long, it will simply feel like the only way things have ever been."
+    "You understood, distantly, that you were no longer entirely the one thinking these thoughts."
+
+    scene black
+    with fade
+    "Mrs. Voss found the room empty the next morning. No body. No note. Only a tray, tea gone cold, cup turned exactly ninety degrees."
+    "A new listing went up within the week. Live-in caretaker needed. Immediate start. Discretion appreciated."
+    "Somewhere upstairs, behind a heavy study door, something that used to be [mc_name] began, patiently, to wait for whoever answered it."
+    "THE END(1/3)"
+    return
+label ending_simon:
+    scene study at bg_fit
+    with dissolve
+    with fade 
+    "Whatever bound Simon to that hallway smile unspooled from him all at once, like a held breath finally let go — and wound itself, thread by thread, around you instead."
+
+    s "I'm sorry. I told myself every year that I wouldn't do this again, and every year, I did it anyway."
+
+    "For the first time since you'd met him, he looked entirely, uncomplicatedly free. It did not make what was happening to you hurt any less."
+
+    scene black
+    with fade
+
+    "Hale found Simon's old room empty the next morning, and yours as well. He didn't report either as missing. Some things in that house, he'd learned, you simply crossed off the list instead."
+
+    "A new hire started the following week, and found the halls oddly welcoming — a smiling man at the door, quick with the schedule, quicker still with a reassuring word for every strange thing about the house."
+
+    "The man introduced himself, brightly, by a name that was not [mc_name]'s, though something behind his eyes remembered it anyway."
+
+    "THE END(2/3)"
+
+    return
+    
+
+
+    
+
     
     
             
