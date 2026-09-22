@@ -1,6 +1,6 @@
 ﻿transform bg_fit:
     xysize(1920,1080)
-default [main_character] = "Robin"
+default main_character = "Robin"
 default day_num = 0
 default suspicion = 0
 label start:
@@ -128,7 +128,7 @@ label day_1:
             v "You will stop asking eventually, everyone does."
             $ suspicion += 1
         "Let it go.":
-            mc "Right.... noted."
+            m "Right.... noted."
             show voss at truecenter
             v "Good. The kitchen is back that way if you need anything."
             v "Mind the rules and then you will be fine here."
@@ -172,7 +172,7 @@ label day_1:
     mn "I do not mind some curiosity. I mind repitition."
     mn "Ask them again, and I will know that you did not the first time."
     "You had not told anyone that you asked."
-    scene bedroom at truecenter
+    scene bedroom at bg_fit
     with dissolve
     with fade
     "Your first day as a caretaker of that place was over."
@@ -217,7 +217,7 @@ label day_2:
             "You told yourself that people move cups. That is what cups are for."
             "You set the new tray down, did not knock, same as yesterday."
             "Same as you had been told to."
-    scene bg main_hall at bg_fit
+    scene main_hall at bg_fit
     with dissolve
     with fade
     show simon at truecenter
@@ -233,7 +233,7 @@ label day_2:
     "He talked the entire way there. About the weather and a leak in the east gutter."
     "He kept meaning to mention to Hale. About nothing, really, filling every silence before it even had a chance to start."
     hide simon 
-    menu optional_name:
+    menu:
         "Ask him directly how long he has worked here.":
             m "How long have you been here, exactly?"
             m "Mrs. Voss made it sound like it was a long time."
@@ -311,7 +311,7 @@ label after_scene:
             hide voss 
             "She looked at you a moment longer, then went back to her work without another word."
             $ suspicion += 1
-    scene bg garden at bg_fit
+    scene garden at bg_fit
     with dissolve
     with fade
     show hale at truecenter
@@ -362,7 +362,8 @@ label day_3:
         "Carry it up as told.":
             "You quickly dissociate any thoughts regarding what is inside the parcel, and proceeded to carry it upwards."
     show voss at truecenter
-    with dissolvev "He has not asked for this in a very long time..."
+    with dissolve
+    "He has not asked for this in a very long time..."
     hide voss
     scene upstairs_hall at bg_fit
     with dissolve
@@ -445,7 +446,7 @@ label day_3:
     with dissolve
     with fade
     "Two different hands and two different notes. You start to understand Edmund was not the only one writing to you."
-    $ day num = 4
+    $ day_num = 4
     jump day_4
 label day_4:
     scene bedroom at bg_fit
@@ -486,7 +487,7 @@ label day_4:
         v "Did i not tell you to not ask me why?"
         hide voss 
         $ suspicion += 2
-    elif suspicion >= 4
+    elif suspicion >= 4:
         v "You have got that look again. The look of asking something that you should not."
         hide Voss
         m "Would you tell me if i did?"
@@ -507,7 +508,7 @@ label day_4:
                 show voss at truecenter
                 with dissolve
                 v "No, go on then."
-    else:
+    else :
         v "Morning, sleep alright?"
         hide voss
         m "Better than the first night."
@@ -588,16 +589,16 @@ label day_4:
     scene upstairs_hall
     with dissolve
 
-    narrator "That night, the tray came back with only one note this time — but the handwriting wasn't the one you'd grown used to."
+    "That night, the tray came back with only one note this time — but the handwriting wasn't the one you'd grown used to."
 
     if suspicion >= 9:
-        master_note "I know you're close to understanding. I'm not going to stop you."
-        master_note "I will tell you this much, freely: ask Simon what year he thinks it is. Watch his face when he answers."
+        "I know you're close to understanding. I'm not going to stop you."
+        "I will tell you this much, freely: ask Simon what year he thinks it is. Watch his face when he answers."
     elif suspicion >= 4:
-        master_note "Someone else has been leaving marks in this house besides me. You've started to notice. Good."
-        master_note "I would rather you know slowly than not at all."
+        "Someone else has been leaving marks in this house besides me. You've started to notice. Good."
+        "I would rather you know slowly than not at all."
     else:
-        master_note "Rest well tonight. Tomorrow will ask more of you than today did."
+        "Rest well tonight. Tomorrow will ask more of you than today did."
 
     scene bedroom at bg_fit
     with dissolve
@@ -635,7 +636,7 @@ label day_5:
         "You were starting to think of the unusual cup as usual now."
     scene main_hall at bg_fit
     with dissolve
-    with hpunch
+    with fade
     show simon at truecenter
     with dissolve
     s "Good morning, you look like you have got something on your mind."
@@ -879,7 +880,8 @@ label day_6:
     mn "Do bring the key that Voss gave to you."
     mn "Do not use it unless you must."
     mn "Knock. Come in no matter what the answer."
-    scene bedroom
+    scene bedroom at bg_fit
+    with fade
     with dissolve
     "You sat for a while and thought of what happened. Tomorrow was the day you would finally know what this house needs to do to you."
     $ day_num = 7
@@ -902,9 +904,6 @@ label day_7:
     m "Yeah, I have to know."
     show voss at truecenter
     with dissolve
-    m "Yeah, I have to know."
-    show voss at truecenter
-    with dissolve
     v "No, you do not. That is the part that no one has believed."
     v "I have had this conversation and no one understood. I believe you will not either."
     v "I am not wasting my breath on this again."
@@ -916,7 +915,7 @@ label day_7:
     v "Not for Ashworth. Not for Simon. But for yourself."
     hide voss
     "That was the only thing that she was going to give you, and you both knew it."
-    scene bg_garden at bg_fit
+    scene garden at bg_fit
     with dissolve
     with fade
     show hale at truecenter
@@ -942,7 +941,8 @@ label day_7:
     s "Yeah."
     hide simon
     "He does not understand it fully either, maybe."
-    scene upstairs_hall
+    scene upstairs_hall at bg_fit
+    with fade
     with dissolve
     "The night came faster than you expected it to."
     "You climbed the stairs for one last time, key in one hand and nothing in the other."
@@ -1056,7 +1056,7 @@ label ending_ashworth:
     with fade
     "Mrs. Voss found the room empty the next morning. No body. No note. Only a tray, tea gone cold, cup turned exactly ninety degrees."
     "A new listing went up within the week. Live-in caretaker needed. Immediate start. Discretion appreciated."
-    "Somewhere upstairs, behind a heavy study door, something that used to be [mc_name] began, patiently, to wait for whoever answered it."
+    "Somewhere upstairs, behind a heavy study door, something that used to be you began, patiently, to wait for whoever answered it."
     "THE END(1/3)"
     return
 label ending_simon:
@@ -1076,10 +1076,28 @@ label ending_simon:
 
     "A new hire started the following week, and found the halls oddly welcoming — a smiling man at the door, quick with the schedule, quicker still with a reassuring word for every strange thing about the house."
 
-    "The man introduced himself, brightly, by a name that was not [mc_name]'s, though something behind his eyes remembered it anyway."
+    "The man introduced himself, brightly, by a name that was not yours, though something behind his eyes remembered it anyway."
 
     "THE END(2/3)"
 
+    return
+label ending_neutral:
+    scene study at bg_fit
+    with dissolve
+    with fade
+    "You did not look at either of them and just went out to the door and walked down."
+    "You went out to the cellar feeling the metal key that Mrs.Voss gave to you."
+    "You opened the door."
+    scene cellar at bg_fit
+    with dissolve
+    with hpunch
+    "The stairs down there were narrower and colder than above, more so than the coldness of the house."
+    "At the bottom, you found a small room and when you looked into it, you realized it was for the third caretaker."
+    "You saw what looked like a box where you realized was where the dead body of him contained."
+    scene house_exterior_dark at bg_fit
+    with dissolve
+    "You quickly paid your respects and went out, never looking back ever at the house again."
+    "THE END(3/3)."
     return
     
 
